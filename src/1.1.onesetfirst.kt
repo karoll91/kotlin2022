@@ -9,7 +9,7 @@ fun helloWorld() {
     val text = "Hello world"
     println(text)
 }
-//Task 2
+//Task 2 dfd
 /**
  * 2. Write a program to display the following output using a single cout statement.
 
@@ -23,6 +23,7 @@ fun printStatement() {
     val mathematics = 90
     val computer = 77
     val chemistry = 69
+
 
     println("Subject:   $subject \nMathematics: $mathematics \nComputer:    $computer \nChemistry:  $chemistry")
 }

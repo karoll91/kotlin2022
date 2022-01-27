@@ -315,20 +315,28 @@ fun binarySearch (){
  * 8. Suppose A, B, C are arrays of integers of size M, N, and M + N respectively. The numbers in array A appear in ascending order while the numbers in array B appear in descending order. Write a user defined function in C++ to produce third array C by merging arrays A and B in ascending order. Use A, B and C as arguments in the function.
  */
 fun arraysOofWholeNumbers (){
-    println("Enter number of elements in the array: ")
-    val size = readLine()!!.toInt()
-    val intToArrat = IntArray(size)
+    println("Enter number of A elements in the array: ")
+    val sizeA = readLine()!!.toInt()
+    val intToArratA = IntArray(sizeA)
     println("Enter array: ")
-//    for (arrayA in intToArrat.indices){
-//        print("arrays A [$arrayA] : ")
-//        intToArrat[arrayA] = readLine()!!.toInt()
-//    }
-//    arrayUsingInsertionSortMethod(intToArrat)
-    for (arrayB in intToArrat.indices){
-        print("arrays B [$arrayB] : ")
-        intToArrat[arrayB] = readLine()!!.toInt()
+    for (arrayA in intToArratA.indices) {
+        print("arrays A [$arrayA] : ")
+        intToArratA[arrayA] = readLine()!!.toInt()
     }
-    arrayUsingInsertionSortMethodReverse(intToArrat)
+    arrayUsingInsertionSortMethod(intToArratA)
+
+    println("Enter number of B elements in the array: ")
+    val sizeB = readLine()!!.toInt()
+    val intToArratB = IntArray(sizeB)
+    println("Enter array: ")
+    for (arrayB in intToArratB.indices) {
+        print("arrays B [$arrayB] : ")
+        intToArratB[arrayB] = readLine()!!.toInt()
+    }
+    arrayUsingInsertionSortMethodReverse(intToArratB)
+    var arrayC = intToArratA.plus(intToArratB)
+    arrayUsingInsertionSortMethod(arrayC)
+
 }
 fun displayElementOfArrayReverse(userArray: IntArray) {
     println("Elements of the array: ")
@@ -341,10 +349,10 @@ fun arrayUsingInsertionSortMethodReverse(userArray: IntArray){
     println("Before sorting: ")
     displayElementOfArray(userArray)
     for (index in 1 until  userArray.size) {
-        if (userArray[index] < userArray[index-1]){
+        if (userArray[index] > userArray[index-1]){
             var comingIndex = index
             for (innerIndex in index downTo 0){
-                if (userArray[comingIndex] < userArray[innerIndex]) {
+                if (userArray[comingIndex] > userArray[innerIndex]) {
                     val temp = userArray[comingIndex]
                     userArray[comingIndex] = userArray[innerIndex]
                     userArray[innerIndex] = temp

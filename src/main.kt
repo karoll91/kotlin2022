@@ -57,7 +57,7 @@ fun main(){
 //    random()
 //    uppercaseWhile()
 //    uppercaseIf()
-//    game()
+    game()
 
     /**
      * 4.1. User Defined Function set-1
@@ -83,7 +83,7 @@ fun main(){
 //    menuDriven()
 //    efficientlySearch()
 //    binarySearch()
-    arraysOofWholeNumbers ()
+//    arraysOofWholeNumbers ()
 
     /**
      * 6.1. String set-1
@@ -102,6 +102,7 @@ fun main(){
      */
 //    squareMatrix()
 
+//    marge()
 
 //    println("Before Sort")
 //    val A = intArrayOf(1, 7, 3, 9, 4)

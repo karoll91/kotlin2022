@@ -93,7 +93,7 @@ fun random(){
 }
 
 fun rand (start: Int, end: Int): Int{
-    require(start <= end) {"Ihtiyoriy son"}
+    require(start <= end)
     val rand = Random(System.nanoTime())
     return (start..end).random(rand)
 }
@@ -124,7 +124,7 @@ fun uppercaseWhile(){
 fun uppercaseIf(){
         print("Matn kiriting: ")
         var text = readLine()!!.toString()
-        println(text.toUpperCase())
+        println(text.uppercase(Locale.getDefault()))
 }
 
 //task library sixth (6)

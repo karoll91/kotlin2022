@@ -77,12 +77,13 @@ fun main(){
      */
 //    sumAndAvg()
 //    sumAndAvgTwo()
-    swapFirstLastElement()
+//    swapFirstLast()
 //    reverseElement()
 //    arrayMaxMin()
-
-
-//    arrayOptions()
+//    menuDriven()
+//    efficientlySearch()
+//    binarySearch()
+    arraysOofWholeNumbers ()
 
     /**
      * 6.1. String set-1
@@ -93,6 +94,26 @@ fun main(){
 //    strContents()
 //    compareTwoStr()
 //    strPolindrome()
+
+//    swapFirstLastElement()
+
+    /**
+     * 7.1. Array - Two Dimension
+     */
+//    squareMatrix()
+
+
+//    println("Before Sort")
+//    val A = intArrayOf(1, 7, 3, 9, 4)
+//    for (i in A) print(i)
+//
+//    selection_sort(A)
+//
+//    println("Sorted array is : ")
+//        for (i in A) print(i)
+
+//    swapFirstAndLastElement()
+
 
 }
 

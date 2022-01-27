@@ -9,7 +9,7 @@ fun helloWorld() {
     val text = "Hello world"
     println(text)
 }
-//Task 2 dfd
+//Task 2
 /**
  * 2. Write a program to display the following output using a single cout statement.
 
@@ -23,7 +23,6 @@ fun printStatement() {
     val mathematics = 90
     val computer = 77
     val chemistry = 69
-
 
     println("Subject:   $subject \nMathematics: $mathematics \nComputer:    $computer \nChemistry:  $chemistry")
 }
@@ -90,7 +89,7 @@ fun ascii() {
 /**
  * 7. Write a program to swap the values of two variables.
  */
-fun swap() {
+fun swap(i: Int, i1: Int) {
     print("Enter first number: ")
     var a = readLine()!!.toInt()
 

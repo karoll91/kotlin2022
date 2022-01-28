@@ -2,7 +2,6 @@ fun main(){
     /**
      * 1.1. Variable, Operator & Expression one task set-1
      */
-
 //    helloWorld()
 //    printStatement()
 //    sum()
@@ -57,7 +56,7 @@ fun main(){
 //    random()
 //    uppercaseWhile()
 //    uppercaseIf()
-    game()
+//    game()
 
     /**
      * 4.1. User Defined Function set-1
@@ -83,7 +82,8 @@ fun main(){
 //    menuDriven()
 //    efficientlySearch()
 //    binarySearch()
-//    arraysOofWholeNumbers ()
+//    arraysOfWholeNumbers()
+//    arraysOfDescendingOrder()
 
     /**
      * 6.1. String set-1
@@ -100,20 +100,12 @@ fun main(){
     /**
      * 7.1. Array - Two Dimension
      */
+//    task-1 not task
 //    squareMatrix()
+    multiplicationRowElement()
 
-//    marge()
 
-//    println("Before Sort")
-//    val A = intArrayOf(1, 7, 3, 9, 4)
-//    for (i in A) print(i)
-//
-//    selection_sort(A)
-//
-//    println("Sorted array is : ")
-//        for (i in A) print(i)
 
-//    swapFirstAndLastElement()
 
 
 }

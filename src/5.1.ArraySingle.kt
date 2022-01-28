@@ -314,7 +314,7 @@ fun binarySearch (){
 /**
  * 8. Suppose A, B, C are arrays of integers of size M, N, and M + N respectively. The numbers in array A appear in ascending order while the numbers in array B appear in descending order. Write a user defined function in C++ to produce third array C by merging arrays A and B in ascending order. Use A, B and C as arguments in the function.
  */
-fun arraysOofWholeNumbers (){
+fun arraysOfWholeNumbers (){
     println("Enter number of A elements in the array: ")
     val sizeA = readLine()!!.toInt()
     val intToArratA = IntArray(sizeA)
@@ -334,16 +334,9 @@ fun arraysOofWholeNumbers (){
         intToArratB[arrayB] = readLine()!!.toInt()
     }
     arrayUsingInsertionSortMethodReverse(intToArratB)
-    var arrayC = intToArratA.plus(intToArratB)
+    val arrayC = intToArratA.plus(intToArratB)
     arrayUsingInsertionSortMethod(arrayC)
 
-}
-fun displayElementOfArrayReverse(userArray: IntArray) {
-    println("Elements of the array: ")
-    for (index in 0 until userArray.size){
-        print("${userArray[index]}\t")
-    }
-    println()
 }
 fun arrayUsingInsertionSortMethodReverse(userArray: IntArray){
     println("Before sorting: ")
@@ -367,7 +360,28 @@ fun arrayUsingInsertionSortMethodReverse(userArray: IntArray){
 /**
  * 9. Suppose X. Y, Z are arrays of integers of size M, N, and M + N respectively. The numbers in array X and Y appear in descending order. Write a user-defined function in C++ to produce third array Z by merging arrays X and Y in descending order.
  */
+fun arraysOfDescendingOrder (){
+    println("Enter number of X elements in the array: ")
+    val sizeX = readLine()!!.toInt()
+    val intToArrX = IntArray(sizeX)
+    println("Enter array X: ")
+    for (arrayX in intToArrX.indices){
+        print("Array X [$arrayX]: ")
+        intToArrX[arrayX] = readLine()!!.toInt()
+    }
+    arrayUsingInsertionSortMethodReverse(intToArrX)
 
+    val intToArrY = IntArray(sizeX)
+    println("Enter array Y: ")
+    for (arrayY in intToArrY.indices){
+        print("Array Y [$arrayY]: ")
+        intToArrY[arrayY] = readLine()!!.toInt()
+    }
+    arrayUsingInsertionSortMethodReverse(intToArrY)
+
+    val arrayC = intToArrX.plus(intToArrY)
+    arrayUsingInsertionSortMethodReverse(arrayC)
+}
 /**
  * 10. Given two arrays of integers A and B of sizes M and N respectively. Write a function named MIX () with four arguments, which will produce a third array named C. such that the following sequence is followed.
 All even numbers of A from left to right are copied into C from left to right.

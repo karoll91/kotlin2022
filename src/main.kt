@@ -84,7 +84,7 @@ fun main(){
 //    binarySearch()
 //    arraysOfWholeNumbers()
 //    arraysOfDescendingOrder()
-
+//    sortingOfEvenAndOddNumbers()
     /**
      * 6.1. String set-1
      */
@@ -100,14 +100,18 @@ fun main(){
     /**
      * 7.1. Array - Two Dimension
      */
-//    task-1 not task
+//    menuDrivenTwoDimension()
 //    squareMatrix()
-    multiplicationRowElement()
+//    multiplicationRowElement()
+//    upperHalf()
+//    displaysElementRowCol()
+//    addTwoArray()
+//                       task-7 not task
 
+//      forFun()
 
-
-
-
+//    testMatrix()
+test()
 }
 
 

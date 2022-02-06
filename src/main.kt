@@ -100,7 +100,7 @@ fun main(){
     /**
      * 7.1. Array - Two Dimension
      */
-//    menuDrivenTwoDimension()
+    menuDrivenTwoDimension()
 //    squareMatrix()
 //    multiplicationRowElement()
 //    upperHalf()
@@ -111,7 +111,8 @@ fun main(){
 //      forFun()
 
 //    testMatrix()
-test()
+//maintest()
+    forFun()
 }
 
 

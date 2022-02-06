@@ -11,80 +11,68 @@ To display column-wise sum of matrix of size m x n
 To create transpose of matrix B of size n x m
  */
 fun menuDrivenTwoDimension() {
-    var matrixUser: Array<IntArray>? = null
-
+    var testUserMatrix: Array<IntArray>? = null
     do {
         println(
-            "\nMenu" +
-                    "\n1. To input elements into matrix of size m x n" +
-                    "\n2. To display elements of matrix of size m x n" +
-                    "\n3. Sum of all elements of matrix of size m x n" +
-                    "\n4. To display row-wise sum of matrix of size m x n" +
-                    "\n5. To display column-wise sum of matrix of size m x n" +
-                    "\n6. To create transpose of matrix B of size n x m" +
+            "\nMENU" +
+                    "\n1. Accept elements of Matrix" +
+                    "\n2. Display elements of  Matrix" +
+                    "\n3. Sum of all elements of matrix" +
+                    "\n4. Display row-wise sum of matrix" +
+                    "\n5. Display column-wise sum of matrix" +
+                    "\n6. Create transpose of matrix B of size" +
                     "\n7. Exit"
         )
-        println("Enter your choice: ")
-        val userChoice = readLine()!!.toInt()
+        println("Enter your choice")
+        val myChoice = readLine()!!.toInt()
 
-        when (userChoice) {
+        when (myChoice) {
             1 -> {
-                matrixUser = inputElement()
+                testUserMatrix = enterElements()
             }
-            2 -> {
-
-            }
-            3 -> {
-
-            }
-            4 -> {
-
-            }
-            5 -> {
-
-            }
-            6 -> {
-
-            }
+            2 -> if (testUserMatrix != null) displayingNumbers(testUserMatrix) else println("Oops")
+            3 -> if (testUserMatrix != null) println(sumOfAllElements(testUserMatrix))  else println("Oops")
+            4 -> if (testUserMatrix != null) println(displayRowWiseSum(testUserMatrix))  else println("Oops")
+            5 -> if (testUserMatrix != null) println(displayColWiseSum(testUserMatrix))  else println("Oops")
+            6 -> if (testUserMatrix != null) transpose(testUserMatrix) else println("Oops")
         }
-
-    } while (userChoice != 7)
+    } while (myChoice != 7)
 }
+fun enterElements(): Array<IntArray> {
+    println("Enter rows and columns: ")
+    val sizeOfTest = readLine()!!.toInt()
+    val testArray = Array(sizeOfTest) { IntArray(sizeOfTest) }
 
-fun inputElement(): Array<IntArray> {
-    println("Enter the number of row element: ")
-    val row = readLine()!!.toInt()
-
-    println("Enter the number of row element: ")
-    val col = readLine()!!.toInt()
-
-    val result = Array(row) { IntArray(col) }
-
-    println("rowspan: $row, colspan: $col")
-
-    return result
-}
-
-fun displayElement() {
-
-    inputElement()
-
-    println("Table arrays automatic")
-    for (row in 0 until inputElement().size) {
-        val colArray = IntArray(row)
-        for (cols in 0 until colArray.size) {
+    for (row in testArray.indices) {
+        val columnArray = IntArray(sizeOfTest)
+        for (column in columnArray.indices) {
             val inputNumber = (0..100).random()
-            colArray[cols] = inputNumber
+            columnArray[column] = inputNumber
         }
-        inputElement()[row] = colArray
+        testArray[row] = columnArray
     }
-    for (rowNumbers in inputElement()) {
-        for (columnNumbers in rowNumbers) {
-            print(columnNumbers)
-            print(" ")
-        }
+    for (row in testArray.indices) {
+        print(testArray[row].contentToString())
         println()
     }
+    return testArray
+}
+fun displayingNumbers(displayingNumbers: Array<IntArray>) {
+    for (row in displayingNumbers.indices) {
+        println(displayingNumbers[row].contentToString())
+    }
+}
+fun sumOfAllElements(sumMatrix: Array<IntArray>) = sumMatrix.sumOf { it.sum() }
+fun displayRowWiseSum(rowWise: Array<IntArray>) = rowWise.map { it.sum() }
+fun displayColWiseSum(colWise: Array<IntArray>) = colWise[0].indices.map {col -> colWise.sumOf { row -> row[col] }}
+fun transpose(matrix: Array<IntArray>): Array<Array<Int>> {
+    val result: Array<Array<Int>>
+            = Array(matrix[0].size, { Array(matrix.size, {0})})
+    for (i:Int in 0 until matrix.size)
+        for (j:Int in 0 until matrix[0].size)
+            result[j][i] = matrix[i][j]
+
+    return result
 }
 
 /**
@@ -177,9 +165,6 @@ fun upperHalf() {
         }
         println()
     }
-
-
-
     println("After")
 
 }

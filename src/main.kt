@@ -79,7 +79,7 @@ fun main(){
 //    swapFirstLast()
 //    reverseElement()
 //    arrayMaxMin()
-//    menuDriven()
+    menuDriven()
 //    efficientlySearch()
 //    binarySearch()
 //    arraysOfWholeNumbers()
@@ -100,20 +100,32 @@ fun main(){
     /**
      * 7.1. Array - Two Dimension
      */
-    menuDrivenTwoDimension()
+//    menuDrivenTwoDimension()
 //    squareMatrix()
 //    multiplicationRowElement()
 //    upperHalf()
 //    displaysElementRowCol()
 //    addTwoArray()
 //                       task-7 not task
-
-//      forFun()
-
-//    testMatrix()
-//maintest()
-    forFun()
+//    val n = readLine()!!.toInt()
+//    val m = readLine()!!.toInt()
+//
+//    println("min = ${min(n,m)}")
+//    println("max = ${max(n,m)}")
+//}
+//fun min (a:Int, b:Int):Int{
+//    if (a < b){
+//        return a
+//    }else{
+//        return b
+//    }
+//}
+//fun max (a:Int, b:Int):Int{
+//    if (a > b){
+//        return a
+//    }else{
+//        return b
+//    }
 }
-
 
 

@@ -141,9 +141,9 @@ fun menuDriven() {
     println("Size of Array: ")
     val sizeOfArray = readLine()!!.toInt()
 
+
     println("size: $sizeOfArray")
     val userArray = IntArray(sizeOfArray)
-
     do {
         println(
             "\nMenu" +
